@@ -16,6 +16,7 @@ class SettingsPage extends StatelessWidget {
         child: Container(
           constraints: const BoxConstraints(maxWidth: 400),
           child: ListView(
+            key: const PageStorageKey('fav'),
             children: [
               _SingleSection(
                 title: "General",
