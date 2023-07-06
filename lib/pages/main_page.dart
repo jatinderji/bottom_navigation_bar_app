@@ -2,7 +2,8 @@ import 'package:bottom_navigation_bar_app/pages/favourite_page.dart';
 import 'package:bottom_navigation_bar_app/pages/home_page.dart';
 import 'package:bottom_navigation_bar_app/pages/profile_page.dart';
 import 'package:bottom_navigation_bar_app/pages/settings_page.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
+import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -39,16 +40,12 @@ class _MainPageState extends State<MainPage> {
             });
           },
           items: const [
-            Icon(Icons.favorite_border_rounded),
-            Icon(Icons.home),
-            Icon(Icons.person),
-            Icon(Icons.settings)
-            // BottomNavigationBarItem(
-            //     icon: Icon(Icons.favorite_border_rounded), label: 'Favourite'),
-            // BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            // BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profle'),
-            // BottomNavigationBarItem(
-            //     icon: Icon(Icons.settings), label: 'Settings'),
+            CurvedNavigationBarItem(
+                child: Icon(Icons.favorite_border_rounded), label: 'Favourite'),
+            CurvedNavigationBarItem(child: Icon(Icons.home), label: 'Home'),
+            CurvedNavigationBarItem(child: Icon(Icons.person), label: 'Profle'),
+            CurvedNavigationBarItem(
+                child: Icon(Icons.settings), label: 'Settings'),
           ]),
     );
   }
